@@ -6,7 +6,7 @@ European Conference on Computer Vision (ECCV), 2026
 [Paper](https://arxiv.org/abs/2603.20186) | [Project Page](https://iizuka.cs.tsukuba.ac.jp/projects/i2irfr/)
 
 <p align="center">
-<img src="teaser.jpg" width="80%">
+<img src="teaser.jpg" width="60%">
 </p>
 
 ## Overview
