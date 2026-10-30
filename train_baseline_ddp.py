@@ -23,7 +23,7 @@ import utils
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input_root", default="datasets/train/low_blur")
+    parser.add_argument("--input_root", default="datasets/train/low_blur_noise")
     parser.add_argument("--gt_root", default="datasets/train/high_sharp_scaled")
     parser.add_argument("--crop_size", type=int, default=256)
     parser.add_argument("--batch_size", type=int, default=4)

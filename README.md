@@ -46,7 +46,7 @@ Training uses paired RGB PNG images with matching relative paths in the input an
 
 ```text
 datasets/train/
-├── low_blur/
+├── low_blur_noise/
 │   ├── 0000/0010.png
 │   ├── 0000/0011.png
 │   └── ...
@@ -66,7 +66,7 @@ Datasets are **not** included in this repository. Please obtain them from their 
 
 ```bash
 python train_baseline.py \
-    --input_root datasets/train/low_blur \
+    --input_root datasets/train/low_blur_noise \
     --gt_root datasets/train/high_sharp_scaled \
     --save_dir checkpoints/rfr
 ```
@@ -75,7 +75,7 @@ python train_baseline.py \
 
 ```bash
 python train_baseline.py \
-    --input_root datasets/train/low_blur \
+    --input_root datasets/train/low_blur_noise \
     --gt_root datasets/train/high_sharp_scaled \
     --standard_regression \
     --save_dir checkpoints/regression
@@ -85,7 +85,7 @@ python train_baseline.py \
 
 ```bash
 torchrun --standalone --nproc_per_node=2 train_baseline_ddp.py \
-    --input_root datasets/train/low_blur \
+    --input_root datasets/train/low_blur_noise \
     --gt_root datasets/train/high_sharp_scaled \
     --save_dir checkpoints/rfr_ddp
 ```
@@ -98,7 +98,7 @@ Run I2I-RFR inference on one image or a directory:
 
 ```bash
 python inference.py \
-    --input datasets/test/low_blur \
+    --input datasets/test/low_blur_noise \
     --output results/rfr \
     --checkpoint checkpoints/rfr/latest.pth \
     --n_sampling_steps 3
@@ -108,7 +108,7 @@ For a standard regression checkpoint, add `--standard_regression` and use the co
 
 ```bash
 python inference.py \
-    --input datasets/test/low_blur \
+    --input datasets/test/low_blur_noise \
     --output results/regression \
     --checkpoint checkpoints/regression/latest.pth \
     --standard_regression
