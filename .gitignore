@@ -1,0 +1,20 @@
+# Data and outputs
+datasets/
+checkpoints/
+results/
+
+# Weights
+*.pth
+*.pt
+
+# Python cache / environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and local config
+.vscode/
+.idea/
+.env
+.DS_Store
