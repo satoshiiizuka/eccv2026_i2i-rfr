@@ -22,7 +22,7 @@ def main():
     parser.add_argument("--crop_size", type=int, default=256)
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--workers", type=int, default=2)
-    parser.add_argument("--steps", type=int, default=500_000)
+    parser.add_argument("--steps", type=int, default=1000_000)
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--log_interval", type=int, default=100)
     parser.add_argument("--save_interval", type=int, default=20_000)
